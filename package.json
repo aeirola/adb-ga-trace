@@ -1,0 +1,39 @@
+{
+  "name": "adb-ga-trace",
+  "version": "1.0.0",
+  "description": "Human readable output for Android Google Analytics debug log",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint *.js",
+    "test": "mocha index.spec.js",
+    "start": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeirola/adb-ga-trace.git"
+  },
+  "author": "Axel Eirola <axel.eirola@iki.fi>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aeirola/adb-ga-trace/issues"
+  },
+  "homepage": "https://github.com/aeirola/adb-ga-trace#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "mocha": "^3.4.2"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "node": true,
+      "mocha": true
+    },
+    "rules": {
+      "no-console": "off"
+    }
+  }
+}
