@@ -1,5 +1,18 @@
 language: node_js
 node_js:
-  - '8'
-  - '7'
-  - '6'
+- '8'
+- '7'
+- '6'
+
+jobs:
+  include:
+  - stage: npm release
+    script: echo "Deploying to npm"
+    deploy:
+      provider: npm
+      email: axel.eirola@iki.fi
+      api_key:
+        secure: MEzDsfMZegAtvXSR7MBPbi2qCoTwgALbx/MHBwYMdE8UqqmypQK4iqoduMrkGqhFEy5lTja15spCD/8ULqbMMxTf/f0c9TsNqP83kbOBj16X+ZHb0pTaqtJb75wBtBHsUOhsIaqFm+d5s4NsTGs+W1sDGEFyyOQCwgiksDGcAORZIF3N9LONxEQhJ9DV53xzSieRi6g/ws+eZCX2og4gFqww2H+NQ1H6ZM24W3jMJihTRmQqbhMstPRt6j+4aBMW4AfIzuXiM7TJtgDoKxtRdy8oXXlyk4SInWmrJm7rOiImZUNv+Kvw2AesmNyEOkVofnmOgUoyD5XSr2Iw7QB3+p1UyanNDbDzyv1nL+CxsIeIKJa/yrK3ou/l2gWLd67Je+egkn9PuYzSjQE9EPMX1fPStMmMUcD0hFxrV8MGJMwFiNKXgSTqaNxyPOKLPxUlzzr9J2oJyMmEquzkEwRJ27YlqCzcabgXbf0kDnTCTEzOJ9q+Aj8wUsi7lh7lXutRJNg77ClzWWgzDhRMhk0BKZ/n2WObUpCKlGv12dfljrAv3rE9xrC7rmh7c+NtcScTV0Z//VBZbAD02DIAFYf60XFu0+W3F4E1PqfC3hFFS6OzpQkLpn71/IbB2AmfPPHg2TSBNhvIjWtufs0d7REok6ZOVzoMTt9d3K0jSRq70bA=
+      on:
+        tags: true
+        repo: aeirola/adb-ga-trace
