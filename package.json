@@ -8,6 +8,7 @@
     "test": "mocha index.spec.js",
     "start": "./index.js"
   },
+  "bin": "./index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aeirola/adb-ga-trace.git"
