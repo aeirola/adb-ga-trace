@@ -1,5 +1,7 @@
 # `adb-ga-trace`
 
+[![Build Status](https://travis-ci.org/aeirola/adb-ga-trace.svg?branch=master)](https://travis-ci.org/aeirola/adb-ga-trace)
+
 Pretty print your Android Google Analytics debug logs.
 
 Instead of looking at logs like this
