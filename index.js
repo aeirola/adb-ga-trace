@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { spawn } = require('child_process');
+const spawn = require('child_process').spawn;
 const colors = require('colors');
 
 // From https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters
@@ -178,8 +178,8 @@ function formatLogLine(logLine) {
       .split(parameterSeparatorMatcher)
       // Convert to paramter-value map
       .reduce((map, parameter) => {
-        const [id, value] = parameter.split('=', 2);
-        map[id] = value;
+        const parameterParts = parameter.split('=', 2);
+        map[parameterParts[0]] = parameterParts[1];
         return map;
       }, {});
 

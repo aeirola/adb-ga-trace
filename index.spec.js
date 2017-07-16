@@ -1,7 +1,7 @@
 const assert = require('assert');
 require('colors');
 
-const {formatLogLine} = require('./index');
+const formatLogLine = require('./index').formatLogLine;
 
 describe('adb-ga-trace', () => {
   it('should format non-logcat formatted lines verbatim in gray', () =>
